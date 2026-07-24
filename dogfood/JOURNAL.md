@@ -255,3 +255,20 @@ Then Matt pasted a full design document from a live project, and the session cha
 - Told Matt earlier in the session that opening/closing through the plugin commands "settles the audit item," then renamed the namespace mid-session — which guaranteed the wrap could only resolve under the stale name. The settle is at best half-done, and I didn't flag that consequence when executing the rename.
 - Deck v1's diagnosis slides buried Matt's intended logic under a two-column layout; he had to hand me the frame. Same session, second design correction (alignment). The template now encodes both so they aren't re-learned.
 - The session-economy tension of taking a new deliverable into a wrap-point session was surfaced by the diagnosis workflow — not by me at the moment it happened. The 3–0 surviving fix (arc-boundary capture) exists because the behavior went unflagged in real time.
+
+---
+
+## 2026-07-24 — Session 8: Brief 007, then two captures across a moving floor
+
+**Intended vs. actual:** No plan was proposed or approved — Matt opened with a direct question ("do we tell the model to use weaker agents for easy tasks?"), not `/resume`. The answer (swarm-only coverage; four named gaps) became the spec for **Brief 007** in Matt's next message — filed and integrated the same hour, five files. Then the conversation sat while Session 7 published the repo out from under it, and resumed as pure capture: two Later entries (the talk's part-four self-critiques in full; the `superpowers:brainstorming` borrow for Session 0), then this wrap. Question → doctrine → capture; nothing built outside it.
+
+**Friction, honestly:**
+- **The history was rebuilt mid-conversation.** Session 7's publish squash ran while this conversation was open: Brief 007's commit hash (`bc0d144`) vanished from `main`, and CLAUDE.md changed shape between turns. Content survived — the squash carried Brief 007's files, verified at wrap — but the conversation only *detected* the rewrite at wrap-time, by noticing the missing hash. A session that had committed and then kept working from stale assumptions would have been worse. Same family as the environment-state gap Session 7 named and didn't solve.
+- **The wrap resolved via `playbook:wrap-up` again** — second session with the stale namespace, `vibezen:*` still never observed.
+- Part-four capture required the artifact's full HTML (WebFetch truncated before slide 30); the saved-file fallback worked.
+
+**How-we-work decisions made this session (capture only):** Brief 007 itself — the unified routing doctrine — is the session's one doctrine change, filed as a brief per process. Nothing else new; the two captures are routed, not decided.
+
+**Mood read:** Matt in post-publish systems mode — terse, batch-feeding improvements from his own talk's self-critique section into the backlog. High trust: a one-paragraph ask carried an entire brief's spec, and he pointed the hostile-learnings entry at the playbook's own weakest joints.
+
+**My failures:** None Matt had to correct. One near-miss worth logging: I didn't notice the orphaned Brief 007 commit until the wrap's own checks surfaced it — a conversation outliving a history rewrite had no tripwire for it, and the detection was luck-adjacent (a `git log` line count that looked wrong). If the squash had dropped a file instead of just a hash, the captures would have been built on a false floor.

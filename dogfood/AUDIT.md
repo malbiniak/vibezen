@@ -4,7 +4,18 @@ Wrap-up self-audit capture (Brief 001). Written by Code at session end, never re
 
 ---
 
-## 2026-07-24 — Session 7 (Published; the rename outran its own verification)
+## 2026-07-24 — Session 8 (Brief 007 + two captures; the floor moved mid-conversation)
+
+Triage note for `/resume`: Session 7's entry below is **still untriaged** — this session never ran `/resume` (Matt opened with a question). Two entries now stack; triage this one, then Session 7's.
+
+1. **`vibezen:*` has now failed to be observed across two consecutive sessions.** This wrap resolved via stale `playbook:wrap-up`, same as Session 7's. The instruction pointing sessions at `/vibezen:resume` remains a pointer no session has followed successfully. **Check:** unchanged from Session 7's item 1 — next session opens with `/vibezen:resume`; resolves → closes both instances; errors → fixing the install precedes all work.
+
+2. **Local `main` is ahead of `origin/main`; the published repo lacks this session's captures.** Since 2026-07-24 installs come from GitHub, unpushed commits are invisible to every install and every other machine — the two Later captures and this wrap exist only here. **Check:** `git status -sb` at next session; `ahead 0` after Matt directs a push settles it, or Matt states local-only intent and STATUS records that instead.
+
+3. **A conversation that outlives a history rewrite has no tripwire.** This conversation committed Brief 007 as `bc0d144`; Session 7's publish squash then rebuilt `main`, orphaning the hash while carrying the content. Detection happened only because this wrap's checks counted commits — nothing in the ritual looks for it. The exposure: a long-lived conversation resuming after a rewrite could build on files that changed underneath it (CLAUDE.md demonstrably did change between this conversation's turns). **Check:** at next `/resume`, verify the specific claim — `git log --all --oneline | grep bc0d144` returns nothing AND `dogfood/briefs/decision-brief-007-unified-task-routing.md` exists with all five "Brief 007" citations resolving (both verified true at this wrap; the check is re-runnable). Whether a standing guard is warranted (e.g. a session-start `git log` sanity line) is a process question — that half is **speculation** and lives in the environment-state problem already parked in SCOPE.md Later (the killed-diagnosis gap), not here.
+
+No other material gaps. The scrub passed on every changed doc; Brief 007's integration was verified twice (at filing, and again post-squash at this wrap).
+
 
 Triage note for `/resume`: the repo is public and installed from GitHub; the freeze holds (two tests remain, recorded in STATUS). Items below are few and specific — the session was heavily checked in-flight (two scrubs including full history, spec-verified claims, an adversarial review pass over its own behavior).
 
