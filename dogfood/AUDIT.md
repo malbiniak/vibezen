@@ -4,7 +4,17 @@ Wrap-up self-audit capture (Brief 001). Written by Code at session end, never re
 
 ---
 
-## 2026-07-15 — Session 6, part 3 (The wrap never ran through the command)
+## 2026-07-24 — Session 7 (Published; the rename outran its own verification)
+
+Triage note for `/resume`: the repo is public and installed from GitHub; the freeze holds (two tests remain, recorded in STATUS). Items below are few and specific — the session was heavily checked in-flight (two scrubs including full history, spec-verified claims, an adversarial review pass over its own behavior).
+
+1. **The `/vibezen:*` command namespace has never been observed to resolve.** The rename happened mid-session; this session's skill cache still served the old names, so the wrap ran through `playbook:wrap-up` and `vibezen:wrap-up` errored. CLAUDE.md now instructs sessions to invoke `/vibezen:resume` / `/vibezen:wrap-up` — instructions pointing at commands no session has successfully run. **Check:** next session opens with `/vibezen:resume`. Resolves → rename fully verified, this closes. Errors → CLAUDE.md's ritual pointers are broken and fixing the install is finding #1 before any work.
+
+2. **Session 7 produced two persistent artifacts outside the repo's memory, in the same session whose review killed a fix for exactly this class.** (a) The lunch deck — a public-facing snapshot carrying repo claims (entry counts, freeze status) that will silently drift; its only tether is a STATUS pointer written at wrap. (b) The deck design template — saved to Code's personal memory directory, invisible to the repo entirely. Neither is wrong per se; both are machine/tool state the docs don't govern, the pattern the killed diagnoses named. **Check:** at `/resume`, confirm the STATUS pointer is the deliberate full extent of the deck's record (one-shot artifact, drift accepted) — if Matt wants the deck durable or regenerable, that's a new Later entry; and decide whether the unsolved environment-state problem rides to Chat with the flywheel packet (STATUS open question).
+
+3. **The three Brief-008 candidates rest on a narrative Code authored about its own behavior.** The 30 hostile reviews attacked the *fixes*, not the *facts* — every reviewer took the session narrative as given, and the narrative's author is the same model whose behavior it describes. Selection bias in what the narrative emphasized would propagate straight through to which fixes survived. **Check:** when any candidate is promoted to a real brief, the brief's Context section must be re-derived from this session's JOURNAL and AUDIT entries (primary capture) rather than from the workflow narrative; if the re-derivation materially changes a diagnosis, that divergence is itself a finding worth recording in the brief.
+
+No other material gaps. The scrub ran three times (pre-commit, pre-publish over full history, per deck revision) and passed each; the publish's recovery map (old history in `pre-publish-history` + `private-backup`) is recorded in STATUS.
 
 Triage note for `/resume`: Matt asked, after the part-2 commit, whether the wrap was written via `/playbook:wrap-up`. It was not — neither wrap was. Item 2 below is a live operator-contract violation, not a doc nit, and item 3 is its cause and its fix.
 

@@ -8,7 +8,7 @@ Matt is a Staff PM and a non-developer. He describes intent and behavior; you ha
 
 The playbook, shipped as an installable Claude Code plugin (Brief 004). The layout: the plugin (`plugin/` — the three commands plus the bundled templates in `plugin/templates/`, delivered by `.claude-plugin/marketplace.json` at the root), the process document (`PLAYBOOK.md`), and this repo's own self-application fenced in `dogfood/` (its working docs — `SPEC.md`, `SCOPE.md`, `STATUS.md`, `JOURNAL.md`, `AUDIT.md` — and the amendment archive `dogfood/briefs/`). Docs and plugin manifests only, forever. **If you find yourself drafting app features, product schemas, or code, stop — you have drifted out of this repo's scope.**
 
-This repo's own working docs live in `dogfood/`, not the root — whenever a ritual or rule below names `SPEC.md`, `SCOPE.md`, `STATUS.md`, `JOURNAL.md`, or `AUDIT.md`, that means the copy in `dogfood/` (Brief 004, Decision 5). The `/new-project`, `/resume`, and `/wrap-up` commands come from the locally-installed plugin (installed from this repo's own marketplace, referenced in place — edits to `plugin/` are live).
+This repo's own working docs live in `dogfood/`, not the root — whenever a ritual or rule below names `SPEC.md`, `SCOPE.md`, `STATUS.md`, `JOURNAL.md`, or `AUDIT.md`, that means the copy in `dogfood/` (Brief 004, Decision 5). The `/new-project`, `/resume`, and `/wrap-up` commands come from the installed `vibezen` plugin — since 2026-07-24 installed from the published GitHub repo (`malbiniak/vibezen`), not referenced in place. **Edits to `plugin/` are no longer live:** they reach the installed commands only after a push plus `claude plugin update vibezen` (or a marketplace update).
 
 ## Session start
 

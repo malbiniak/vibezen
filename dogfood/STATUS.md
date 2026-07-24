@@ -1,67 +1,56 @@
 # Status
 
-*Last updated: 2026-07-15 (Session 6, part 2 — closed at wrap-up)*
+*Last updated: 2026-07-24 (Session 7 — closed at wrap-up)*
 
-*Wrap-up checks: cross-references resolve ✓ · privacy scrub clean across every tracked and untracked file ✓ — but the scrub caught a real violation mid-session that Code introduced and did not self-catch (JOURNAL.md) · no builds this session*
+*Wrap-up checks: cross-references resolve ✓ · privacy scrub clean across every tracked and untracked file ✓ (also run against full git history before publish — 20 commits, zero hits) · plugin acceptance test over the real GitHub install ✓*
 
-> **Read this first at `/resume`.** Part 2 of this session overturned the plan that part 1 recorded. **The next session is Publish, not the Sam dry-run.** The reasoning is below and the audit's top entry carries the checks.
+> **Read this first at `/resume`.** The repo is **published**: https://github.com/malbiniak/vibezen — public, live, installed and verified from GitHub on this machine. The freeze is **not lifted** (its two tests remain). Matt promoted **dogfooding the loop** to the top of Next at session end. And one mechanical thing to verify first: this session's own wrap resolved via the *stale* `playbook:wrap-up` skill name — `vibezen:wrap-up` did not resolve because the session's skill cache predates the mid-session rename. **Open this session with `/vibezen:resume`; if it doesn't resolve, that's finding #1.**
 
 ## Where things stand, in plain English
 
-Session 6 was a **pure capture session** and the freeze held — nothing was built. Matt brought back field-tested answers from live project sessions plus one substantial design document; seven new Later entries, one amendment, one handoff packet. No template, plugin, or PLAYBOOK.md file was touched. Detail in the part-1 journal entry.
+Session 7 ran three arcs:
 
-**Then, after the wrap, Matt corrected the plan at its root.** He asked whether to publish now so he could run the dry-run on his work machine, or wait to do it locally. Code argued against publishing. Code was wrong, and the reason matters:
+**Arc 1 — Publish (the plan).** Audit triage → five correctness fixes (both public factual claims verified against primary sources and date-stamped; freeze banner re-stated to match its real intent; code-puppy entry rewritten on Matt's confirmed facts; CLAUDE.md↔command drift closed; AGENTS.md phantom fixed). Then Matt escalated: all the way to push, dedicated repo, new name. **Vibezen** (vibe coding × kaizen) — repo, marketplace (`vibezen-market`), plugin (`vibezen`), command namespace (`/vibezen:*`), README identity statement. Published as a **fresh public repo with a single squashed founding commit**; the working history stays private. Recovery map: full pre-publish history lives in local branch `pre-publish-history` and the private remote `private-backup` (github.com/malbiniak/metaatem — a quiet backup remote that surfaced *undocumented* at push time; see audit). Post-push acceptance: both README install commands run clean from GitHub (clone-to-cache), all three commands ship. Stale local-path install removed.
 
-**The freeze's real question has always been: "can someone else install this plugin on their own, with only the README?"** The banner conflates that intent with its operationalization — *"the plugin install is verified — the Sam dry-run's remaining rounds must be crossed off"* — and Code read the second clause as the condition. They are not the same test. **Rounds 2 and 3 are local and could never answer it.** No local run can. The freeze's question can only be answered by publishing, then installing somewhere naive.
+**Arc 2 — The lunch-and-learn deck (unplanned, Matt-directed).** A 17-slide artifact for Matt's IC lunch & learn: the project's arc, the seven briefs, a hand-rendered backlog board, the failure reel, the dogfooding flywheel, and a "microscope" section — five of Matt's working assumptions diagnosed against this session's own behavior, each proposed fix attacked by 3 hostile reviewers × 2 rounds (44 agents total). **3 fixes survived, 2 died even after revision** — the deck shows the bodies. Deck: claude.ai/code/artifact/889f5ecb-4df9-407e-a5ba-0a2371e54ea3 (private until Matt shares). The three survivors are captured in SCOPE.md Later as **Brief-008 candidates**.
 
-Two consequences, both correctness-class:
-
-- **The freeze banner (SCOPE.md) is mis-operationalized.** Its intent is right and unmet; its named test doesn't test it.
-- **Publish was never frozen, and STATUS said it was.** The banner gates the *backlog* ("this gates the whole backlog"); Publish has been in **Next** since before the freeze existed. Part 1 of this file called the dry-run "the only sanctioned build." That was this file's error, not Matt's.
-
-Matt also settled two open facts. **The interview is cleared** — round 1 asked about an app, he answered, it closed by asking whether to keep the files; re-running it on Fable tests something already proven (round 3's Opus parity is still a release condition, but it isn't the freeze). And **he has Claude Code on his work machine** — plus the fact that the Walmart-internal build *is* Claude Code, modified for work proxies and an internal marketplace.
+**Arc 3 — Session-end capture.** Matt promoted the contribution flywheel ("dogfood") to the top of Next. Deck design system saved as a reusable template in Code's personal memory (applies on "vibezen style").
 
 ## What works
 
-- **The "add to Later" ritual absorbed an entire session's scope creep without a single promotion.** Seven substantial ideas — including one hard requirement with a full design — landed in Later and stayed there.
-- **The §12 handoff ran as designed, unprompted.** Matt independently reached for "box this up and hand it to Chat," which is what §12 prescribes. The doctrine matched the instinct.
-- **Brief 006 self-applied.** One Explore agent at the start for the file survey; everything after was inline. The work didn't need fan-out and didn't get it.
-- **The interview substance is settled** (round 1, Session 4): operator-profile elicitation, verification question, persona coverage, first-slice vectoring all landed.
-- Brief 006, Brief 005 — integrated and unchanged.
+- **Published and installable.** The README's two install commands are the whole onboarding, now proven over the real GitHub path (on this machine).
+- **The full session opened AND closed through plugin commands** — `/playbook:resume` at start, wrap via command at end — settling the audit item open since 2026-07-07. (Caveat: wrap resolved under the stale pre-rename name; new namespace unverified.)
+- **The defer funnel absorbed another loaded session:** four new Later entries (kaizen principle, configurable wrap-up, Brief-008 candidates, plus resolutions), zero unsanctioned scope built.
+- **The adversarial-review pattern worked in anger:** two plausible process fixes were killed for real defects (a staleness-prone ledger; a privacy leak *inside a process fix*). The kills were more valuable than the survivors.
+- Briefs 001–007 — integrated and unchanged.
 
 ## What's half-done
 
-- **Publish — four things from a clean push.** Two are Code's: the 1-hour-TTL billing claim and the `file://` opaque-origin claim, both written into this repo on the strength of a paste, both unverified, both going public under Matt's name (audit items 1–2 of the part-1 entry). Two are only Matt's: comfort-read Brief 001's Context section (it discusses his cognitive-fatigue pattern — Session 0 audit), and confirm the LICENSE copyright name spelling. Then the venue call, which sets the README's `<owner>/<this-repo>` and the `playbook-market`/`playbook` naming.
-- **The Sam dry-run — round 1 of 3, and rounds 2–3 have been re-scoped.** Round 2 (Fable re-run) tests an interview that's already cleared; its value has dropped. Round 3 (Opus parity) remains a release condition but does **not** answer the freeze. Neither blocks Publish.
-- **`SCOPE.md`'s code-puppy port entry researched the wrong artifact** — see the audit.
-- **Round-1 artifacts:** `../charlie/` kept for comparison; `sam-dryrun/workspace/` empty.
-- **Three audit entries are stacked untriaged** (Session 6 part 2, Session 6 part 1, Session 5, Session 4). Part 1 of this session never ran `/resume`, so nothing was triaged.
+- **The freeze — two tests remain.** (a) Matt installs on his work machine from the README alone (naive machine); (b) a real teammate installs (naive person — the lunch deck literally recruits volunteers). Freeze lifts on (a) + (b).
+- **`/vibezen:*` namespace unverified** — the rename happened mid-session; this session's skill cache still served `playbook:*`. Next session settles it.
+- **Three Brief-008 candidates await triage** (SCOPE.md Later): gate-irreversibility, blast-radius checkpoint (mechanical tier), arc-boundary capture. Each survived hostile review; each needs a real brief; Matt picks what, if anything, becomes Brief 008. Note: the candidates were diagnosed from a session narrative Code itself wrote — any brief should re-derive from JOURNAL/AUDIT primary sources, not the narrative.
+- **The deck is a snapshot outside the repo** — it carries claims about the repo (entry counts, freeze status) that will drift as the repo evolves. Treated as a one-shot presentation artifact; this pointer is its only record here.
+- **Sam dry-run rounds 2–3** — unchanged; round 3 (Opus parity) still a release condition, not freeze-relevant.
 
 ## Not tasks (parked deliberately)
 
-- **Install-verification freeze** — still in effect, still unmet, and now correctly understood. It gates the **backlog**, not Publish.
-- **All seven new Later entries** — board, defer-funnel, flywheel, demand-characteristics, org-scale handoff, idle-resume, git model. Captured, frozen, none sanctioned.
-- **The org-scale contribution pattern** — explicitly not this repo's build, pending Chat's thinking on `dogfood/handoff-contribution-flywheel-at-scale.md`.
+- **Install-verification freeze** — in effect, correctly stated in SCOPE.md's banner, unmet.
+- **All Later entries** — including the two new ones (kaizen-as-principle needs a brief; configurable wrap-up rituals) and the killed diagnoses' unsolved problem (environment state outside the docs — named, no accepted fix).
+- The org-scale contribution pattern — still with Chat.
 - The 2026-07-05 dry-run project; `../meta-private/docs/start/`; no DATA-MODEL.md — unchanged.
 
 ## Next session: proposal (drafted — confirm at /resume)
 
-**Publish.** It is the only path to the freeze's actual question, it was never frozen, and it is four small things away. In order:
+**Dogfood the loop** (Matt's promotion, top of Next). In order:
 
-0. **Open the session with `/playbook:resume`, and close it with `/playbook:wrap-up` — invoked as commands, not performed from memory.** Session 6 ran zero plugin commands while writing two wraps and seven backlog entries *about* the plugin; both wraps were hand-rolled from `CLAUDE.md` and both violated the command's one-line operator contract as a result. This is free — it costs nothing extra and it settles the `/resume`-from-plugin question open since 2026-07-07.
-1. **Triage the audit stack** (Brief 001 — most recent entry first). Four of the correctness items below come straight out of it, including the `CLAUDE.md` ↔ `plugin/commands/wrap-up.md` drift that caused the contract violation.
-2. **Code verifies its two public factual claims** (part-1 audit items 1–2): the `file://` opaque-origin behavior (`showSaveFilePicker()` from a `file://` page → observe), and Claude Code's prompt-cache TTL on subscription vs. overage against Anthropic's documentation. Correct or attribute both. ~20 minutes.
-3. **Fix the freeze banner in `SCOPE.md`** — separate the intent ("can someone else install from only the README") from the operationalization, and drop the rounds-2/3 clause, which never tested it.
-4. **Fix the code-puppy entry in `SCOPE.md`** to reflect what the internal build actually is.
-5. **Matt's two personal checks:** Brief 001 Context comfort-read; LICENSE name spelling.
-6. **Matt's venue call** → fill the README's `<owner>/<this-repo>`, settle `playbook-market`/`playbook` naming. Publishing to a repo he plans to move from would validate an install path that's about to change.
-7. **Push.**
-8. **Then the freeze's real test, in two halves.** (a) *Mechanics:* Matt installs on his work machine from the README alone — a genuinely naive machine, never seen this repo, real proxies, real permission prompts, real clone-to-cache. This is Publish's own blocker #1, and it's the right tool for it. (b) *Comprehension:* a real teammate tries it. A naive machine is not a naive person — Matt can't un-know the README. Sam is a decent proxy for (b); an actual teammate is the answer. **The freeze lifts on (a) + (b), not before.**
+0. **Open with `/vibezen:resume`.** If it resolves, the rename is fully verified and the CLAUDE.md note stands; if not, fix the install/namespace first — it's finding #1.
+1. **Triage this audit** (most recent entry first), including the Brief-008 pick: which surviving candidate(s) go to Chat for a real brief.
+2. **Design the flywheel's first leg** — adopting the playbook into one of Matt's live projects (the merge-loses-nothing constraint is hard). Per §12 the design goes to Chat and returns as a brief; this session only scopes the handoff packet.
+3. **Freeze tests as opportunity allows:** work-machine install (a); teammate volunteer from the lunch (b). Either can run before the flywheel work — they're Matt-paced, not session-paced.
 
 ## Open questions for Matt (for the next /resume — not posed now)
 
-- **Venue** — which public repo. Blocks the README placeholder, the marketplace add command, and the naming. Everything in Publish waits on this one call.
-- **Does the freeze lift on the mechanics half alone (8a), or does it need a real teammate (8b)?** The stated question — "can someone else install this on their own with only the README" — says a teammate. That's a person Matt has to find and ask, which is a different kind of cost than a test he can run himself.
-- **Is the code-puppy port item dead?** If the internal build is Claude Code with an internal marketplace, the plugin may just publish there — no port, no file-copying. That would also give the flywheel packet a real distribution channel instead of a hypothetical one.
-- **Does round 3 (Opus parity) still gate release,** now that it's been separated from the freeze? It's a real check with nothing forcing its timing.
-- **Does the flywheel's scrub stage change the privacy rule itself?** SPEC.md's scrub is written for one operator committing his own repo. Intake from live projects is a different threat model, and this session produced a real failure inside the current one.
+- **Which Brief-008 candidate(s) get promoted to an actual brief?** Three survived review; they need not all ship, and the arc-boundary one (3–0) touches the wrap ritual's own doctrine.
+- **Did anyone at the lunch volunteer** for the teammate install test — and how did the deck land?
+- **Which live project is the adoption target?** Session 6 pointed at the backlog-board project ("would benefit the day it adopts"); confirm before designing the merge.
+- **Does the killed-diagnosis problem (machine state outside the docs) go to Chat too,** riding along with the flywheel packet, or stay parked as honestly-unsolved?

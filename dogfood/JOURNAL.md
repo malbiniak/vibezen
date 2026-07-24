@@ -233,3 +233,25 @@ Then Matt pasted a full design document from a live project, and the session cha
 **Mood read:** clean stop at a natural seam — fixes shipped, test script staged, tank saved for the actual test runs.
 
 **Next:** rounds 2–3 per STATUS.md's proposal; Matt posts results at the next `/resume`.
+
+---
+
+## 2026-07-24 — Session 7: Published, named, presented
+
+**Intended vs. actual:** The plan approved at `/resume` was publish-prep — audit triage plus five correctness fixes, push-ready by end. Actual: all of that, **plus the push itself** (Matt escalated mid-plan: "all the way to push," dedicated repo), plus a rename with a soul (**vibezen** — Matt asked for a kaizen × vibe-coding × his-name brainstorm, picked the portmanteau, and directed the kaizen intent into the README's spine), plus an unplanned second deliverable: a 17-slide lunch-and-learn deck assembled by a 44-agent workflow that adversarially reviewed five of Matt's own working assumptions — two proposed fixes died in review, and the deck shows the kills. The repo is public at github.com/malbiniak/vibezen; the deck is a claude.ai artifact.
+
+**Friction, honestly:**
+- **The publish plan collided with an undocumented remote.** A private GitHub backup (`metaatem`, last pushed Session 6) existed in git config and nowhere in the working docs. It surfaced at push time and changed the option space live. Matt chose fresh-repo/squashed-commit; old history survives in a local branch and the private remote. The system's own principle — the repo carries the memory — did not cover machine state, and the diagnosis of exactly this gap *died* in hostile review twice. Named, unsolved.
+- **The rename broke things silently, twice.** The old local-path plugin install failed to load after the manifest rename (caught by listing plugins); and at wrap, `vibezen:wrap-up` did not resolve — this session's skill cache predates the rename — so the wrap ran through the stale `playbook:wrap-up` name. The new namespace is still unverified.
+- **The workflow launcher crashed once on my own args bug** (passed JSON as a string; the tool's docs warn against exactly this). One-line script patch, relaunch, clean run.
+- **Deck v1's microscope slides failed Matt's read.** He had to supply the four-beat frame (assumption → tested → verdict → fix) and, separately, the anchored-grid alignment principle. Both now live in the deck and in the saved template.
+
+**How-we-work decisions made this session (capture only):** publish now, from a dedicated repo; fresh public repo with a single squashed commit, working history stays private; everything renamed vibezen (repo, marketplace, plugin, namespace); kaizen intent split — README statement now, PLAYBOOK principle routed to Later pending a brief; Brief 001's Context publishes as-is, ritual-configurability routed to Later; the deck's design system saved as a reusable personal template; **dogfood promoted to the top of Next** in Matt's last message.
+
+**Mood read:** Momentum and celebration, with Matt steering fast through structured questions and free-text payloads — every answer carried intent past the options, and none of it was dropped. He extended a finished session twice (deck, then template extraction) and closed by promoting the loop itself. Confidence in the system visibly higher at end of day than start: he pointed it at his teammates.
+
+**My failures:**
+- Passed the Workflow args as a JSON-encoded string after the tool doc explicitly warned not to — instant crash, avoidable.
+- Told Matt earlier in the session that opening/closing through the plugin commands "settles the audit item," then renamed the namespace mid-session — which guaranteed the wrap could only resolve under the stale name. The settle is at best half-done, and I didn't flag that consequence when executing the rename.
+- Deck v1's diagnosis slides buried Matt's intended logic under a two-column layout; he had to hand me the frame. Same session, second design correction (alignment). The template now encodes both so they aren't re-learned.
+- The session-economy tension of taking a new deliverable into a wrap-point session was surfaced by the diagnosis workflow — not by me at the moment it happened. The 3–0 surviving fix (arc-boundary capture) exists because the behavior went unflagged in real time.
