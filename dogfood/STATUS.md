@@ -1,52 +1,52 @@
 # Status
 
-*Last updated: 2026-07-24 (Session 8 — closed at wrap-up)*
+*Last updated: 2026-07-24 (Session 9 — closed at wrap-up)*
 
-*Wrap-up checks: cross-references resolve ✓ (Brief 007's five citations, PHASE-0.md declined-practice line, Brief 005) · privacy scrub clean on every doc changed this session ✓ · Brief 007 verified intact through the publish squash (file + all citations) ✓*
+*Wrap-up checks: cross-references resolve ✓ (SCOPE.md's two new bullets — the "below" pointer to the brainstorming-borrow entry, and the `PHASE-0.md` step-0 discovery-sprint citation, both checked against the live files) · privacy scrub clean on the one doc changed this session (`dogfood/SCOPE.md`) ✓*
 
-> **Read this first at `/resume`.** Local `main` is **ahead of origin** (this session's backlog captures + this wrap, unpushed) — since installs now come from GitHub, nothing this session wrote reaches the published repo or any install until Matt says push. The `vibezen:*` namespace is **still never observed to resolve**: this session's wrap also ran via stale `playbook:wrap-up`. **Open with `/vibezen:resume`; if it doesn't resolve, that's finding #1** (unchanged from Session 7).
+> **Read this first at `/resume`.** **The freeze's leg (a) appears to have passed**: Matt reports the work-machine install worked from just the two README commands — this is SCOPE.md's exact test (a), unconfirmed-in-the-docs until now. Recording it here rather than editing the freeze banner myself — confirm and update SCOPE.md at triage. Also: **`/vibezen:wrap-up` resolved this session** (first time in three sessions it didn't fall back to stale `playbook:wrap-up`) — but `/vibezen:resume` is still unexercised, because this session, like Session 8, never opened with it. Local `main` is **ahead of origin** (three sessions of unpushed captures now) — nothing here reaches the published repo or any install until Matt says push.
 
 ## Where things stand, in plain English
 
-Session 8 was a long-lived conversation that straddled the publish: its early arc (the routing-gap question → **Brief 007** filed and integrated) happened before Session 7's history squash and rode into the published founding commit — Session 7's wrap already recorded it ("Briefs 001–007"). The conversation's tail, wrapped now, did two things:
+Short session. Matt reported the work-machine plugin install succeeded, then handed over two backlog items and asked to wrap. No triage, no build — pure capture, same shape as Session 8's tail.
 
-1. **Brief 007 — unified task routing** (recorded here for completeness; already in the published history). One judgment-based doctrine: cheapest pattern (inline → single agent → swarm/workflow) + model + effort that gets full quality; escalate on stakes/difficulty; explicit model+effort on every delegated agent, no silent session-model inheritance. Integrated into the routing template, CLAUDE template, PLAYBOOK §7, and this repo's CLAUDE.md.
-2. **Two new Later captures** (commit `b8ceb7b`): (a) the talk's part-four self-critiques — five hostile-challenged refinements, substance captured in full because artifacts expire; notably critique (2) says Brief 007's "full quality" is asserted, never measured — the doctrine's first known crack, filed the day it shipped; (b) borrow `superpowers:brainstorming` mechanics for Session 0, with the PHASE-0 no-founding-brainstorm collision named for the future brief.
+1. **Install confirmation:** the plugin installed and ran using only the two commands in the GitHub README — first real evidence toward the freeze's leg (a).
+2. **Two new Later captures** (this wrap's commit): (a) rename `/resume` — it collides in name with Code's own built-in `/resume`; candidates floated (Konnichiwa, hello, lfg), none picked. (b) A refinement to the existing brainstorming-borrow entry: Matt confirmed live that `/resume` on an empty folder correctly falls into the `/new-project` flow, and named the **discovery sprint** entry path specifically as where that skill's mechanics would land first.
 
 ## What works
 
-- **Brief 007 survived the history rebuild.** Its original commit hash was orphaned by Session 7's squash, but every file and citation is intact in the published history — verified at this wrap.
-- **The defer funnel keeps absorbing:** two loaded captures (one carrying five sub-critiques), zero unsanctioned scope built, freeze untouched.
-- Everything in Session 7's "what works" stands — published, installable, Briefs 001–007 integrated.
+- **The work-machine install.** Ran end-to-end from the README alone — no operator hand-holding, no file reading beyond the two commands.
+- **`/vibezen:wrap-up` resolved on first try this session** — the stale-cache problem that hit Sessions 7 and 8 didn't recur.
+- **The defer funnel keeps absorbing:** two more captures landed clean, zero unsanctioned scope, freeze untouched.
+- Everything in Session 8's "what works" stands.
 
 ## What's half-done
 
-- **Unpushed local commits.** `main` ahead of `origin/main` (backlog captures + this wrap). Push is Matt-paced; until then the published repo lacks these captures.
-- **`/vibezen:*` namespace unverified — second session running.** This wrap resolved via `playbook:wrap-up` again. Carried from Session 7.
-- **This session never opened with `/resume`** — Matt opened with a direct question, so Session 7's audit entry is still untriaged; two audit entries now stack for the next `/resume`.
-- **Three Brief-008 candidates** await triage (unchanged, SCOPE.md Later) — and the new part-four capture adds five more candidate-brief seeds behind them.
-- **The freeze — two tests remain** (work-machine install; teammate install). Unchanged.
+- **Freeze leg (a) — reported passed, not yet reflected in SCOPE.md's banner.** Matt's install report is strong evidence but wasn't run as a scripted acceptance check; confirm at triage before editing the banner. Leg (b) — a teammate's independent install — still unmet.
+- **Unpushed local commits — now three sessions deep.** `main` ahead of `origin/main` (Session 8's captures + wrap, this session's captures + wrap). Push is Matt-paced.
+- **`/vibezen:resume` still unverified.** Wrap resolved clean this session; resume itself hasn't been invoked in three sessions running, because none of them opened with it.
+- **Three Brief-008 candidates + the part-four capture** await triage (unchanged, SCOPE.md Later).
+- **This session never opened with `/resume`** — a third straight session skipping the ritual open. Session 8's audit entry (and Session 7's beneath it) still stack, untriaged.
 - **Sam dry-run rounds 2–3** — unchanged.
 
 ## Not tasks (parked deliberately)
 
-- Install-verification freeze — in effect, unmet.
-- All Later entries, including the two new captures (each is a candidate brief on promotion, not sanctioned work).
+- Install-verification freeze — in effect, leg (a) reported passed pending confirmation, leg (b) unmet.
+- All Later entries, including the two new captures (each is a candidate brief or backlog refinement on promotion, not sanctioned work).
 - The org-scale contribution pattern — still with Chat.
 - The 2026-07-05 dry-run project; `../meta-private/docs/start/`; no DATA-MODEL.md — unchanged.
 
 ## Next session: proposal (drafted — confirm at /resume)
 
-Session 7's proposal stands, with one addition at the front:
-
-0. **Open with `/vibezen:resume`.** Resolves → rename verified, closes the two-session-old item. Doesn't → fix the install first; finding #1.
-1. **Triage this audit entry, then Session 7's beneath it** (two stacked untriaged), including the Brief-008 pick.
-2. **Push, or confirm local-only intent** — local `main` carries captures the published repo doesn't have.
-3. **Design the flywheel's first leg** (adoption handoff packet scoping) — unchanged from Session 7.
-4. **Freeze tests as opportunity allows** — Matt-paced.
+0. **Open with `/vibezen:resume`.** Three sessions running without it — confirm it resolves (now more likely, given wrap resolved clean this session).
+1. **Confirm freeze leg (a) and update the SCOPE.md banner** — Matt's install report needs a yes/no on whether it counts as the scripted test, then the banner text updated to match.
+2. **Triage the stacked audit entries** (Session 7's and Session 8's), including the Brief-008 pick.
+3. **Push, or confirm local-only intent** — three sessions of captures now sit only on this machine.
+4. **Design the flywheel's first leg** (adoption handoff packet scoping) — unchanged from Sessions 7–8.
 
 ## Open questions for Matt (for the next /resume — not posed now)
 
-- All four of Session 7's open questions stand (Brief-008 pick; lunch volunteers; adoption target; killed-diagnosis routing).
-- **Push the local commits?** Two captures + wrap sit only on this machine; the published repo is behind it.
-- **Does the part-four capture change the Brief-008 queue?** Its five refinements overlap the Brief-008 candidates in spirit (audit honesty, defaults, verification) — promotion order is Matt's call; they need not be separate briefs.
+- **Does the work-machine install count as freeze leg (a)?** If yes, SCOPE.md's banner needs updating and leg (b) — a teammate's install — becomes the only thing left gating the freeze.
+- **Push the local commits?** Three sessions of captures + wraps sit only on this machine; the published repo is behind it.
+- All prior open questions from Sessions 7–8 stand (Brief-008 pick; lunch volunteers; adoption target; killed-diagnosis routing; does the part-four capture change the Brief-008 queue).
+- **What should `/resume` be renamed to?** Konnichiwa / hello / lfg / something else — Matt's call, no lean given yet.

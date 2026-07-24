@@ -272,3 +272,19 @@ Then Matt pasted a full design document from a live project, and the session cha
 **Mood read:** Matt in post-publish systems mode — terse, batch-feeding improvements from his own talk's self-critique section into the backlog. High trust: a one-paragraph ask carried an entire brief's spec, and he pointed the hostile-learnings entry at the playbook's own weakest joints.
 
 **My failures:** None Matt had to correct. One near-miss worth logging: I didn't notice the orphaned Brief 007 commit until the wrap's own checks surfaced it — a conversation outliving a history rewrite had no tripwire for it, and the detection was luck-adjacent (a `git log` line count that looked wrong). If the squash had dropped a file instead of just a hash, the captures would have been built on a false floor.
+
+---
+
+## 2026-07-24 — Session 9: install confirmed, two captures, wrap resolved clean
+
+**Intended vs. actual:** No plan proposed — Matt opened with the work-machine install result, not `/resume`. Actual: install confirmation logged, two Later captures added to SCOPE.md, wrap. Third straight session skipping the ritual open; same shape as Session 8's tail.
+
+**Friction, honestly:**
+- **`/resume` still wasn't invoked.** CLAUDE.md is explicit that sessions start by invoking `/vibezen:resume` as a command, and three sessions running now haven't. This session didn't flag it as a finding before proceeding — Matt drove straight into the report and the asks, and I followed rather than naming the skip. Worth a tripwire: notice the missing ritual-open out loud, once, rather than silently absorbing it as normal.
+- **`/vibezen:wrap-up` resolved on the first call.** No fallback to `playbook:wrap-up`, unlike Sessions 7 and 8. Good news, but unverified as *fixed* rather than *this-session-lucky* until `/vibezen:resume` also resolves clean — same namespace, same cache, opposite command.
+
+**How-we-work decisions made this session (capture only):** none — pure capture, nothing decided.
+
+**Mood read:** Terse and transactional — Matt at low bandwidth, feeding facts and backlog items in short bursts, explicitly signaling "wrap up if needed" rather than staying for discussion. Matches CLAUDE.md's cognitive-empty-tank operator profile exactly.
+
+**My failures:** Didn't name the missing `/resume` open as a finding in the moment — should have surfaced it before acting on the requests, even briefly, rather than only catching it here at wrap.

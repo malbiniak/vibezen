@@ -4,6 +4,18 @@ Wrap-up self-audit capture (Brief 001). Written by Code at session end, never re
 
 ---
 
+## 2026-07-24 — Session 9 (install confirmed, two captures; wrap resolved, resume still doesn't)
+
+Triage note for `/resume`: this session didn't run `/resume` either — Matt opened with the install result. Session 7's and Session 8's entries below are **still untriaged**; this makes three stacked entries for the next `/resume` to work through in one sitting.
+
+1. **`/vibezen:resume` remains completely unexercised — three sessions running (7, 8, 9) have skipped the ritual open.** `/vibezen:wrap-up` resolved clean this session for the first time, which rules out a namespace-wide cache problem — but `resume` and `wrap-up` are different commands, and only one has actually been called. **Check:** next session's literal first action is `/vibezen:resume`. Resolves → closes this and the namespace question Session 7 first raised; errors → that's finding #1, ahead of any other work.
+2. **Untriaged audit entries are now three deep, a direct consequence of item 1.** CLAUDE.md's session-start rule says triage the most recent entry before new work begins; that hasn't happened since Session 6. **Check:** at the next `/resume`, count the dated entries above the last "No material gaps" (or above the last entry marked triaged) — it is 3 (Sessions 7, 8, 9) as of this wrap. Triaging all three in one sitting either confirms the triage-first rule holds under backlog pressure or shows it needs a lighter-weight path for stacked entries.
+3. **The freeze's leg (a) — Matt's install report — isn't reflected in SCOPE.md's banner text.** STATUS.md now records the report in plain English, but `dogfood/SCOPE.md`'s freeze banner (the text Matt reads first, per its own instruction) still states the freeze is "in effect," unqualified. **Check:** read `dogfood/SCOPE.md`'s freeze banner; it does not yet mention leg (a). Settle by having Matt confirm the install report counts as the scripted test, then edit the banner to match — or record explicitly that it doesn't count yet and what would.
+
+No other material gaps. The scrub passed on the one changed doc (`dogfood/SCOPE.md`); both new captures cross-check against the files they cite.
+
+---
+
 ## 2026-07-24 — Session 8 (Brief 007 + two captures; the floor moved mid-conversation)
 
 Triage note for `/resume`: Session 7's entry below is **still untriaged** — this session never ran `/resume` (Matt opened with a question). Two entries now stack; triage this one, then Session 7's.
