@@ -1,0 +1,6 @@
+{
+  "name": "vibezen",
+  "description": "The playbook as an installable toolkit (Brief 004): /new-project founds a project from the bundled templates, /resume and /wrap-up run the session rituals inside it.",
+  "version": "1.0.0",
+  "author": { "name": "Matt Albiniak" }
+}

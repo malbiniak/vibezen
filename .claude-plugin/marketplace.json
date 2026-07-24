@@ -1,0 +1,11 @@
+{
+  "name": "vibezen-market",
+  "owner": { "name": "Matt Albiniak" },
+  "plugins": [
+    {
+      "name": "vibezen",
+      "source": "./plugin",
+      "description": "Found and run vibe-coded projects where the operator never reads code: /new-project, /resume, /wrap-up plus the full template set."
+    }
+  ]
+}
