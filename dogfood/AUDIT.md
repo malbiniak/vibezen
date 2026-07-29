@@ -4,6 +4,18 @@ Wrap-up self-audit capture (Brief 001). Written by Code at session end, never re
 
 ---
 
+## 2026-07-28 — Session 10 (off-repo detour, one capture, resume still doesn't)
+
+Triage note for `/resume`: this session didn't run `/resume` either — it opened as a personal-tooling detour, not a task continuation, so there was even less pressure than usual pulling toward the ritual open. Sessions 7, 8, and 9's entries below are **still untriaged**; this makes four stacked entries for the next `/resume` to work through in one sitting.
+
+1. **`/vibezen:resume` remains completely unexercised — four sessions running (7, 8, 9, 10) have skipped the ritual open.** Unchanged mechanic from Session 9's item 1, one more data point. **Check:** next session's literal first action is `/vibezen:resume`. Resolves → closes this; errors → that's finding #1, ahead of any other work.
+2. **Untriaged audit entries are now four deep.** Direct consequence of item 1. **Check:** at the next `/resume`, count the dated entries above the last "No material gaps" (or above the last entry marked triaged) — it is 4 (Sessions 7, 8, 9, 10) as of this wrap.
+3. **This session's off-repo trial (herdr/firstmate/Lavish/OpenSuperWhisper) is speculation, not a finding — routed to SCOPE.md Later, not here.** No falsifiable check applies to "should the pattern ladder reference agent crews" until the tool is actually adopted for real project work; the entry there says so explicitly and is correctly out of the fix-now queue.
+
+No other material gaps. The scrub passed on every doc changed this session (`SCOPE.md`, `STATUS.md`, `JOURNAL.md`) — re-verified across the full set, not just the first file edited; `git status` confirms no other repo file was touched by tonight's off-repo tooling work; the new SCOPE.md entry's citation of Brief 007 resolves against the live file.
+
+---
+
 ## 2026-07-24 — Session 9 (install confirmed, two captures; wrap resolved, resume still doesn't)
 
 Triage note for `/resume`: this session didn't run `/resume` either — Matt opened with the install result. Session 7's and Session 8's entries below are **still untriaged**; this makes three stacked entries for the next `/resume` to work through in one sitting.

@@ -288,3 +288,24 @@ Then Matt pasted a full design document from a live project, and the session cha
 **Mood read:** Terse and transactional — Matt at low bandwidth, feeding facts and backlog items in short bursts, explicitly signaling "wrap up if needed" rather than staying for discussion. Matches CLAUDE.md's cognitive-empty-tank operator profile exactly.
 
 **My failures:** Didn't name the missing `/resume` open as a finding in the moment — should have surfaced it before acting on the requests, even briefly, rather than only catching it here at wrap.
+
+---
+
+## 2026-07-28 — Session 10: off-repo detour, a real bug, and a parked trial
+
+**Intended vs. actual:** No plan proposed, no `/resume` — Matt opened with a video that inspired him (Kun Chen's terminal-native multi-agent Claude Code stack) and asked for research and a live trial on his own machine, correctly identified up front as outside this repo's scope (docs/plugin manifests only). Actual: researched five tools (Pi, herdr, firstmate, Lavish, Automic Vault), installed and smoke-tested a subset (herdr, firstmate, Lavish, OpenSuperWhisper, plus WezTerm/tmux/Neovim), hit a real bug in herdr's session-attach model, and closed with the trial parked rather than debugged further. One Later capture routed back here before wrap; nothing else touched this repo.
+
+**Friction, named honestly:**
+- **Got the herdr/firstmate launch order backwards.** Told Matt to set `FM_BACKEND=herdr` after launching `claude` directly; he'd actually seen (correctly) that herdr should be the *outer* shell — launch `herdr` first, then `claude` inside its pane, so `HERDR_ENV=1` auto-detects and no env var is needed. He caught this from his own memory of the source video, not from anything I verified first.
+- **A shorthand path confused Matt into thinking something was wrong.** I wrote `/private/tmp/.../scratchpad/tools/firstmate` as shorthand in a `cd` command; the `...` read as a truncated, suspicious path rather than my own elision. Cost a full round trip to clarify — no actual problem, just unclear communication.
+- **Diagnosing the mirrored-duplicate-herdr-window bug took real backtracking.** First guess (a missing `.zshrc` step) was wrong and I said so before asserting the fix; then checked whether the presentation-spaces feature was the cause (it wasn't — confirmed no config file exists) before landing on the right explanation (two `herdr` clients attached to the same default session) via the tool's own `--help`, `status`, and default-config output rather than continued guessing. Slower than it should have been, but each wrong branch was checked and discarded rather than asserted as fact.
+- **`/resume` still wasn't invoked — fourth straight session.** This one had the weakest excuse of the four: it opened as a personal-tooling detour, not a mid-task continuation, so there was no task-continuity pressure pulling past it.
+
+**How-we-work decisions made this session:** None — the trial is personal tooling, not playbook doctrine, and stayed correctly out of scope throughout (including Matt's own call, unprompted, that any retry belongs in an isolated sandbox, never this repo).
+
+**Mood read:** Started enthusiastic and exploratory (a genuinely inspiring video, willingness to go "all in"), turned wary mid-session at the duplicate-window bug ("starting to feel like an ambitious but bad decision"), and closed decisive and pragmatic — verified no side effects on his normal VS Code workflow, named where to retry, and wrapped clean. No heat at the friction points; corrections were matter-of-fact.
+
+**My failures:**
+- The launch-order reversal above — should have looked at firstmate's own architecture docs for the backend auto-detection order *before* giving Matt a sequence to run, not after he'd already tried it and found it dry.
+- Used lossy shorthand (`...`) in a literal command I expected Matt to run — a path meant to be copy-pasted should never be abbreviated.
+- Didn't flag the missing `/resume` open in the moment, again — same failure as Session 9, still unfixed.
