@@ -4,6 +4,18 @@ Wrap-up self-audit capture (Brief 001). Written by Code at session end, never re
 
 ---
 
+## 2026-07-28 — Session 11 (config hygiene, resume still doesn't, five deep)
+
+Triage note for `/resume`: this session didn't run `/resume` either — it opened as a direct harness question with no task-continuation excuse, the weakest justification yet for skipping it. Sessions 8, 9, and 10's entries below are **still untriaged**; this makes four stacked entries for the next `/resume` to work through in one sitting.
+
+1. **`/vibezen:resume` remains completely unexercised — five sessions running (7, 8, 9, 10, 11) have skipped the ritual open.** Unchanged mechanic, one more data point, weakest excuse of the five (see JOURNAL). **Check:** next session's literal first action is `/vibezen:resume`. Resolves → closes this; errors → that's finding #1, ahead of any other work.
+2. **Untriaged audit entries are now four deep.** Direct consequence of item 1. **Check:** at the next `/resume`, count the dated entries above the last "No material gaps" (or above the last entry marked triaged) — it is 4 (Sessions 8, 9, 10, 11) as of this wrap.
+3. **The `.claude/settings.json` edit disabling MCP connectors and the `vercel` plugin for this project is unverified to actually take effect.** It was written correctly per the settings schema (`disabledMcpjsonServers`, `enabledPlugins`) but never tested against a fresh session start — no session has yet been observed with the trimmed `/context` numbers. **Check:** at the next `/resume`, run `/context` and confirm the MCP tools table no longer lists `claude_ai_Gmail`, `claude_ai_Google_Drive`, or `claude_ai_Rexham_HA-MCP`, and that no `vercel:*` skills appear in the Skills table.
+
+No other material gaps. The scrub passed on every doc changed this session (`STATUS.md`, `JOURNAL.md`); `git status` confirms the only change outside git's view is the gitignored `.claude/settings.json`, and no repo-tracked file was touched.
+
+---
+
 ## 2026-07-28 — Session 10 (off-repo detour, one capture, resume still doesn't)
 
 Triage note for `/resume`: this session didn't run `/resume` either — it opened as a personal-tooling detour, not a task continuation, so there was even less pressure than usual pulling toward the ritual open. Sessions 7, 8, and 9's entries below are **still untriaged**; this makes four stacked entries for the next `/resume` to work through in one sitting.
